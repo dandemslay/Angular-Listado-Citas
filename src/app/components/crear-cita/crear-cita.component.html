@@ -1,0 +1,25 @@
+<div class="card bg-light">
+    <div class="card-body">
+        <h5 class="cart-title text-center">Agregar Cita</h5>
+        <div *ngIf="frmIncomplete" class="text-center">
+            <span class="badge bg-danger">Todos los campos son requeridos</span>
+        </div>
+        <div class="form-group mb-3">
+            <label for="name">Nombre</label>
+            <input type="text" [(ngModel)]="name" class="form-control" id="name" placeholder="Ingrese su nombre">
+        </div>
+        <div class="form-group mb-3">
+            <label for="date">Fecha</label>
+            <input type="date" [(ngModel)]="date" class="form-control" id="date">
+        </div>
+        <div class="form-group mb-3">
+            <label for="time">Hora</label>
+            <input type="time" [(ngModel)]="time" class="form-control" id="time">
+        </div>
+        <div class="form-group mb-3">
+            <label for="symptoms">Hora</label>
+            <textarea id="symptoms" [(ngModel)]="symptoms" rows="3" class="form-control" placeholder="Ingrese los sintomas"></textarea>
+        </div>
+        <button class="btn btn-primary btn-block" style="width: 100%;" (click)="addApoiment()">Agregar Cita</button>
+    </div>
+</div>

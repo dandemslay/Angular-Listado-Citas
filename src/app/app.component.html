@@ -1,0 +1,13 @@
+<div class="container pt-3">
+  <div class="text-center tituloClass">
+    Aplicacion de citas
+  </div>
+  <div class="row pt-3">
+    <div class="col-lg-6">
+      <app-crear-cita (newApoiment)="addApoiment($event)"></app-crear-cita>
+    </div>
+    <div class="col-lg-6">
+      <app-list-citas [listedApoiments]="listApoiments" (deleteApoiment)="deleteApoimentListed($event)"></app-list-citas>
+    </div>
+  </div>
+</div>

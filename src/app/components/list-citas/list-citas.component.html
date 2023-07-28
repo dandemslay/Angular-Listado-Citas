@@ -1,0 +1,15 @@
+<div *ngIf="listedApoiments.length === 0" class="card bg-light">
+    <div class="card-body">
+        <h5 class="cart-title text-center">No hay citas para mostrar</h5>
+    </div>
+</div>
+<div *ngFor="let apoiment of listedApoiments; let i = index" class="card mb-2">
+    <div class="card-body">
+        <p class="card-text"><span>Nombre: </span>{{ apoiment.name }}</p>
+        <p class="card-text"><span>Fecha: </span>{{ apoiment.date }}</p>
+        <p class="card-text"><span>Hora: </span>{{ apoiment.time }}</p>
+        <p class="card-text"><span>Sintomas: </span>{{ apoiment.symptoms }}</p>
+        <button style="width: 100%;" class="btn btn-danger btn-block" (click)="removeApoiment(i)">Eliminar</button>
+    </div>
+
+</div>
